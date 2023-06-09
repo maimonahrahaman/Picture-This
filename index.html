@@ -16,14 +16,25 @@
       <h4>My Really Cool Blog Post</h4>
     </div>
     <!-- <img src="images/museum.jpg" alt="placeholder"> -->
-    <img srcset="images/museum-320_x_180.png 320w,
-                 images/museum-480_x_270.png 480w,
-                 images/museum-720_x_405.png 720w,
-                 images/museum-960_x_540.png 960w,
-                 images/museum-1600_x_1600.png 960w"
-  
-            alt="placeholder">
-
+    <picture>
+      <source srcset="images/museum_square_1600.jpg"
+                      media="(min-width: 1281px)"/>
+      <source srcset="images/museum_square_1280.jpg"
+                      media="(min-width: 961px)"/>
+      <source srcset="images/museum_square_960.jpg"
+                      media="(min-width: 961px)"/>
+      <source srcset="images/museum-960_x_540.png"
+                      media="(min-width: 721px)"/>
+      <source srcset="images/museum-720_x_405.png"
+                      media="(min-width: 481px)"/>
+      <source srcset="images/museum-480_x_270.png"
+                      media="(min-width: 321px)"/>
+      <source srcset="images/museum-320_x_180.png"
+                      media="(max-width: 320px)"/>
+      <img src="images/museum.jpg"
+           alt="placeholder">
+    </picture>
+          
 
   </header>
 </body>
